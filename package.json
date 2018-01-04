@@ -12,6 +12,9 @@
     "package": "ng-packagr -p ng-package.json"
   },
   "private": false,
+  "peerDependencies": {
+    "ngx-openlayers": "^0.8.16"
+  },
   "dependencies": {
     "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
@@ -46,6 +49,7 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "~2.4.2"
+    "typescript": "~2.4.2",
+    "ngx-openlayers": "^0.8.16"
   }
 }
