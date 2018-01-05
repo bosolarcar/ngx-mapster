@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { BasicViewModule } from './modules/basic-view/basic-view.module';
+import { NgxMapsterModule } from './modules/ngx-mapster/ngx-mapster.module';
 
 
 @NgModule({
@@ -12,7 +12,7 @@ import { BasicViewModule } from './modules/basic-view/basic-view.module';
   ],
   imports: [
     BrowserModule,
-    BasicViewModule
+    NgxMapsterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BasicViewComponent } from './basic-view.component';
+import { WeatherLayerComponent } from './weather-layer.component';
 
-describe('BasicViewComponent', () => {
-  let component: BasicViewComponent;
-  let fixture: ComponentFixture<BasicViewComponent>;
+describe('WeatherLayerComponent', () => {
+  let component: WeatherLayerComponent;
+  let fixture: ComponentFixture<WeatherLayerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BasicViewComponent ]
+      declarations: [ WeatherLayerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BasicViewComponent);
+    fixture = TestBed.createComponent(WeatherLayerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
