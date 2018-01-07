@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TrackService } from '../../../../services/track.service';
+import { TrackInformation } from '../../../../definitions/track';
 
 @Component({
   selector: 'track-menu',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrackMenuComponent implements OnInit {
 
-  constructor() { }
+  trackInformations: TrackInformation[];
+
+  constructor(private trackService: TrackService) { }
 
   ngOnInit() {
+    this.getAllTrackInformations();
+  }
+
+  getAllTrackInformations(): void {
+    this.trackInformations = this.trackService.getAllTrackInformations();
   }
 
 }

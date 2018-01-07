@@ -1,3 +1,38 @@
-<p>
-  left-side-bar works!
-</p>
+<div class="h-100 bg-dark opacity-70 border border-top-0 border-left-0 border-bottom-0 border-light">
+  <div class="btn-group-vertical menu-field-width" role="group" aria-label="Basic example">
+
+    <!-- Search -->
+    <button type="button" class="btn btn-outline-light btn-square menu-field-height border-right-0 border-top-0 border-left-0" (click)="showMenu('search')" [class.active]="selectedMenu == 'search'">
+      <i class="fa-2x fas fa-search"></i>
+    </button>
+
+    <!-- Track -->
+    <button type="button" class="btn btn-outline-light btn-square menu-field-height border-right-0 border-top-0 border-left-0" (click)="showMenu('track')" [class.active]="selectedMenu == 'track'">
+      <i class="fa-2x fas fa-road"></i>
+    </button>
+
+    <!-- POI -->
+    <button type="button" class="btn btn-outline-light btn-square menu-field-height border-right-0 border-top-0 border-left-0" (click)="showMenu('poi')" [class.active]="selectedMenu == 'poi'">
+      <i class="fa-2x fas fa-map-marker-alt"></i>
+    </button>
+
+    <!-- GPS -->
+    <button type="button" class="btn btn-outline-light btn-square menu-field-height border-right-0 border-top-0 border-left-0">
+      <i class="fa-2x fas fa-crosshairs"></i>
+    </button>
+
+    <!-- Weather -->
+    <button type="button" class="btn btn-outline-light btn-square menu-field-height border-right-0 border-top-0 border-left-0" (click)="showMenu('weather')" [class.active]="selectedMenu == 'weather'">
+      <span class="fa-2x fa-layers fa-fw">
+        <i class="fas fa-sun" data-fa-transform="shrink-4 up-2 left-2"></i>
+        <i class="fas fa-cloud" data-fa-transform="shrink-4 down-2 right-2"></i>
+      </span>
+    </button>
+
+    <!-- Settings -->
+    <button type="button" class="btn btn-outline-light btn-square menu-field-height border-right-0 border-top-0 border-left-0">
+      <i class="fa-2x fas fa-cogs"></i>
+    </button>
+
+  </div>
+</div>

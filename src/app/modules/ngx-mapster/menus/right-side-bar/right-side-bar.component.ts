@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { control } from 'openlayers';
 
 @Component({
   selector: 'right-side-bar',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RightSideBarComponent implements OnInit {
 
+  @Output()
+  viewAction: EventEmitter<string> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  fireViewAction(action: string): void {
+    this.viewAction.emit(action);
+  }
 }

@@ -1,13 +1,32 @@
-<aol-map>
 
-  <!-- Standard view -->
-  <aol-view [zoom]="2">
-    <aol-coordinate [x]="5.795122" [y]="45.210225" [srid]="'EPSG:4326'"></aol-coordinate>
-  </aol-view>
+<div id="fullscreencontainer" class="h-100 w-100 border border-dark position-relative">
 
-  <!-- Basis Map from Open Street Maps -->
-  <aol-layer-tile>
-    <aol-source-osm></aol-source-osm>
-  </aol-layer-tile>
+  <!-- Map -->
+  <aol-map id="map-wrapper" class="position-absolute w-100 h-100">
 
-</aol-map>
+    <!-- Activate Interactions -->
+    <aol-interaction-default></aol-interaction-default>
+
+    <!-- Default center of View -->
+    <aol-view [zoom]="zoom">
+      <aol-coordinate [x]="center.x" [y]="center.y" [srid]="'EPSG:4326'"></aol-coordinate>
+    </aol-view>
+
+    <!-- Add OSM Layer -->
+    <aol-layer-tile>
+      <aol-source-osm></aol-source-osm>
+    </aol-layer-tile>
+
+  </aol-map>
+
+  <!-- Menus -->
+  <left-side-bar class="h-100 float-left" (menuSelected)="selectedMenu = $event"></left-side-bar>
+  <div class="h-100 float-left">
+    <search-bar *ngIf="selectedMenu == 'search'"></search-bar>
+    <track-menu *ngIf="selectedMenu == 'track'"></track-menu>
+    <poi-menu *ngIf="selectedMenu == 'poi'"></poi-menu>
+    <weather-menu *ngIf="selectedMenu == 'weather'"></weather-menu>
+  </div>
+  <right-side-bar class="h-100 float-right" (viewAction)="handleViewAction($event)"></right-side-bar>
+
+</div>

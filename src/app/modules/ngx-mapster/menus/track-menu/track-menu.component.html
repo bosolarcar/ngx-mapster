@@ -1,3 +1,13 @@
-<p>
-  track-menu works!
-</p>
+<div class="bg-dark opacity-70">
+  <div class="btn-group-vertical menu-textfield-width" role="group" aria-label="Basic example">
+
+    <button type="button" class="btn btn-outline-light btn-square menu-field-height menu-field-width border-left-0 border-top-0 text-left"
+      *ngFor="let trackInformation of trackInformations">
+      <i *ngIf="trackInformation.type == 'oneway'" class="fas fa-long-arrow-alt-right fa-fw"></i>
+      <i *ngIf="trackInformation.type == 'twoway'" class="fas fa-exchange-alt fa-fw"></i>
+      <i *ngIf="trackInformation.type == 'circle'" class="fas fa-redo-alt fa-fw"></i>
+      {{trackInformation.name}}
+    </button>
+
+  </div>
+</div>

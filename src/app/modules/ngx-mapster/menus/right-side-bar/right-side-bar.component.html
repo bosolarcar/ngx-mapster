@@ -1,3 +1,29 @@
-<p>
-  right-side-bar works!
-</p>
+<div class="h-100 bg-dark opacity-70 border border-top-0 border-right-0 border-bottom-0 border-light">
+  <div class="btn-group-vertical menu-field-width" role="group" aria-label="Basic example">
+
+    <!-- Fullscreen -->
+    <button type="button" class="btn btn-outline-light btn-square menu-field-height border-right-0 border-top-0 border-left-0"
+      (click)="fireViewAction('fullscreen')" data-toggle="tooltip" data-placement="left" title="Fullscreen">
+      <i class="fa-2x fas fa-expand"></i>
+    </button>
+
+    <!-- Zoom-in -->
+    <button type="button" class="btn btn-outline-light btn-square menu-field-height border-right-0 border-top-0 border-left-0"
+      (click)="fireViewAction('zoom-in')" data-toggle="tooltip" data-placement="left" title="Zoom-in">
+      <i class="fa-2x fas fa-plus"></i>
+    </button>
+
+    <!-- Zoom-out -->
+    <button type="button" class="btn btn-outline-light btn-square menu-field-height border-right-0 border-top-0 border-left-0"
+      (click)="fireViewAction('zoom-out')" data-toggle="tooltip" data-placement="left" title="Zoom-out">
+      <i class="fa-2x fas fa-minus"></i>
+    </button>
+
+    <!-- Center-map- -->
+    <button type="button" class="btn btn-outline-light btn-square menu-field-height border-right-0 border-top-0 border-left-0"
+      (click)="fireViewAction('center-map')" data-toggle="tooltip" data-placement="left" title="Center GPS">
+      <i class="fa-2x fas fa-crosshairs"></i>
+    </button>
+
+  </div>
+</div>

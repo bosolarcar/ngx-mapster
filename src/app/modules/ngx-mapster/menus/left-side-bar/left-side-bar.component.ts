@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'left-side-bar',
@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftSideBarComponent implements OnInit {
 
+  @Output()
+  menuSelected: EventEmitter<string> = new EventEmitter();
+
+  selectedMenu: string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showMenu(newSelectedMenu: string) {
+    if (newSelectedMenu === this.selectedMenu) {
+      this.selectedMenu = '';
+      this.menuSelected.emit('');
+    } else {
+      this.menuSelected.emit(newSelectedMenu);
+      this.selectedMenu = newSelectedMenu;
+    }
   }
 
 }

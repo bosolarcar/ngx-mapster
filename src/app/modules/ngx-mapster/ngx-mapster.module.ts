@@ -12,6 +12,7 @@ import { PoiLayerComponent } from './layers/poi-layer/poi-layer.component';
 import { TrackLayerComponent } from './layers/track-layer/track-layer.component';
 import { WeatherLayerComponent } from './layers/weather-layer/weather-layer.component';
 import { GpsLayerComponent } from './layers/gps-layer/gps-layer.component';
+import { TrackService } from '../../services/track.service';
 
 @NgModule({
   imports: [
@@ -32,6 +33,9 @@ import { GpsLayerComponent } from './layers/gps-layer/gps-layer.component';
     GpsLayerComponent],
   exports: [
     NgxMapsterComponent
+  ],
+  providers: [
+    TrackService
   ]
 })
 export class NgxMapsterModule { }

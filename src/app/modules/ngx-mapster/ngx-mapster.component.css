@@ -1,0 +1,82 @@
+/* Basic Classes for all Components*/
+
+::ng-deep .btn.btn-square {
+  border-radius: 0;
+}
+
+::ng-deep .opacity-0 {
+  opacity: 0;
+}
+
+::ng-deep .opacity-10 {
+  opacity: .1;
+}
+
+::ng-deep .opacity-20 {
+  opacity: .2;
+}
+
+::ng-deep .opacity-30 {
+  opacity: .3;
+}
+
+::ng-deep .opacity-40 {
+  opacity: .4;
+}
+
+::ng-deep .opacity-50 {
+  opacity: .5;
+}
+
+::ng-deep .opacity-60 {
+  opacity: .6;
+}
+
+::ng-deep .opacity-70 {
+  opacity: .7;
+}
+
+::ng-deep .opacity-80 {
+  opacity: .8;
+}
+
+::ng-deep .opacity-90 {
+  opacity: .9;
+}
+
+::ng-deep .menu-field-height {
+  height: 50px;
+}
+
+::ng-deep .menu-field-width {
+  width: 70px;
+}
+
+::ng-deep .menu-textfield-width {
+  width: 300px;
+}
+
+/* End of Basic Classes */
+#menu-left-1 {
+  top: 0px;
+}
+
+#menu-left-2 {
+  top: 50px;
+}
+
+#menu-left-3 {
+  top: 100px;
+}
+
+#menu-left-4 {
+  top: 150px;
+}
+
+#menu-left-5 {
+  top: 200px;
+}
+
+#menu-left-6 {
+  top: 250px;
+}
